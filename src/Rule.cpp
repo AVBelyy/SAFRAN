@@ -8,7 +8,8 @@ Rule::Rule(int no1, int no2, double confidence) {
 	headrelation = nullptr;
 	headconstant = nullptr;
 	bodyconstantId = nullptr;
-	this->applied_confidence = (double)correctlyPredicted / ((double)predicted + (double)Properties::get().UNSEEN_NEGATIVE_EXAMPLES);
+	// this->applied_confidence = (double)correctlyPredicted / ((double)predicted + (double)Properties::get().UNSEEN_NEGATIVE_EXAMPLES);
+	this->applied_confidence = confidence;
 }
 
 void Rule::print() {
